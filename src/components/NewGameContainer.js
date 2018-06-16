@@ -5,15 +5,18 @@ import { newGame } from '../actions/index'
 
 class NewGameContainer extends React.PureComponent {
 
-getRandomWord(){
+  getRandomWord(){
+  return this.props.wordslist[Math.floor(Math.random()*this.props.wordslist.length)];
 
-}
+  }
 
 
 
   render() {
     return <div>
-    <button onclick={() => this.props.getRandomWord()}><h2> new game </h2></button>
+      {this.getRandomWord()}
+
+    <button onclick={() => this.props.newGame()}><h2> new game </h2></button>
     </div>
   }
 }
