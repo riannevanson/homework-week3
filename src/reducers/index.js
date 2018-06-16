@@ -1,10 +1,8 @@
-import { combineReducers } from 'redux'
-import newgame from './newgame'
-import wordguess from './wordguess'
-import newenter from './newenter'
+import { combineReducers } from 'redux';
+import wordslist from './wordslist';
 
-export default combineReducers({
-  newgame,
-  wordguess,
-  newenter
-})
+const allReducers = combineReducers({
+  wordslist : wordslist
+});
+
+export default allReducers;
